@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15.83 15.83">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #049dd9;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-2 {
+        font-family: Montserrat-ExtraBold, Montserrat;
+        font-size: 7.75px;
+        font-weight: 700;
+      }
+
+      .cls-6 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-4" width="15.83" height="15.83"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-4" width="15.83" height="15.83"/>
+    </clipPath>
+  </defs>
+  <rect class="cls-3" width="15.83" height="15.83"/>
+  <g id="Artwork_1" data-name="Artwork 1">
+    <g class="cls-6">
+      <g class="cls-5">
+        <path class="cls-1" d="M7.91,1.18c3.71,0,6.73,3.02,6.73,6.73s-3.02,6.73-6.73,6.73S1.18,11.62,1.18,7.91,4.2,1.18,7.91,1.18M7.91,0C3.54,0,0,3.54,0,7.91s3.54,7.91,7.91,7.91,7.91-3.54,7.91-7.91S12.28,0,7.91,0"/>
+      </g>
+      <text class="cls-2" transform="translate(2.12 10.66)"><tspan x="0" y="0">RC</tspan></text>
+    </g>
+  </g>
+</svg>
