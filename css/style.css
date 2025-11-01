@@ -13,6 +13,19 @@ html,body {
   height:100%
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  scroll-margin-top: clamp(64px, 10vh, 96px);
+}
+
+.nav-list a.active {
+  color: var(--text, #fff);
+  font-weight: 600; 
+}
+
 body {
   margin:0;
   background:var(--paper);
