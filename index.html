@@ -138,10 +138,10 @@
       <p class="contactme">Have a project in mind? Let’s create something amazing!</p>
       <div class="card">
       <div class="stack">
-        <input class="input" placeholder="Your name">
-        <input class="input" placeholder="Your email">
-        <textarea class="input" placeholder="Your text" rows="5"></textarea>
-        <button class="btn" type="button">SEND</button>
+        <input id="name" class="input" placeholder="Your name" required>
+        <input id="email" class="input" placeholder="Your email" required>
+        <textarea id="message" class="input" placeholder="Your text" rows="5" required></textarea>
+        <button class="btn" type="button" id="sendBtn">SEND</button>
       </div>
     </div>
     </div>
@@ -152,8 +152,10 @@
   <footer class="mobile">
     <div class="container">mila.petruk@gmail.com · +34 610 988 976</div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/other.js"></script>
+  <script src="js/form.js"></script>
 </body>
 
 </html>

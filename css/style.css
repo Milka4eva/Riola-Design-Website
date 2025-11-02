@@ -323,6 +323,7 @@ strong {
 }
 
 .btn {
+  cursor: pointer;
   display:inline-flex;
   align-items:center;
   justify-content:center;
@@ -334,6 +335,11 @@ strong {
   font-family: 'Oxygen', sans-serif;
   font-size: 20px;
   font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--orange); 
 }
 
 .btn.secondary {
