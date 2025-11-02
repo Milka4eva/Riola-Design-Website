@@ -246,7 +246,7 @@ strong {
 
 .row {
   display:flex; 
-  gap:8px;
+  gap:15px;
   flex-wrap:wrap
 }
 
