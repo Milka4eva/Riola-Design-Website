@@ -225,7 +225,9 @@ strong {
   border:1px solid var(--border);
   border-radius:var(--radius);
   box-shadow:var(--shadow);
-  padding:14px
+  padding:14px;
+  margin-top:14px;
+  margin-bottom: 14px;
 }
 
 .expertise {
