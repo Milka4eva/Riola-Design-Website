@@ -166,13 +166,13 @@ h1,h2,h3 {
 }
 
 h1 {
-  font-size:56px;
+  font-size:60px;
   font-family: 'Lora', serif;
   font-weight: 400;
   color:var(--pink);
   line-height:1.2;
   padding-top: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 56px;
 } 
 
 h2 {
@@ -226,7 +226,7 @@ strong {
   border-radius:var(--radius);
   box-shadow:var(--shadow);
   padding:14px;
-  margin-bottom: 14px;
+  margin-bottom: 24px;
 }
 
 .expertise {
