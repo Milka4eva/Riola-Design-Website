@@ -1,39 +1,44 @@
 (function() {
-    // плавная прокрутка (дублирование не страшно)
-    document.documentElement.style.scrollBehavior = 'smooth';
+  // Плавная прокрутка (на случай, если в CSS не задано)
+  document.documentElement.style.scrollBehavior = 'smooth';
 
-    const nav = document.getElementById('siteNav') || document.querySelector('.site-nav');
-    if (!nav) return;
+  // Берем твое мобильное меню
+  const nav = document.getElementById('mobile-nav');
+  if (!nav) return;
 
-    const links = Array.from(nav.querySelectorAll('a[href^="#"]'));
-    const byId = id => links.find(a => a.getAttribute('href') === '#' + id);
+  const links = Array.from(nav.querySelectorAll('a[href^="#"]'));
+  if (!links.length) return;
 
-    // Подсветка активного пункта при скролле
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          links.forEach(a => a.classList.remove('active'));
-          const link = byId(id);
-          if (link) link.classList.add('active');
-          history.replaceState(null, '', '#' + id);
-        }
-      });
-    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+  const byId = (id) => links.find(a => a.getAttribute('href') === '#' + id);
 
-    document.querySelectorAll('.section[id]').forEach(sec => io.observe(sec));
-
-    // Активная "Главная" по умолчанию, если открыли без hash
-    if (!location.hash) {
-      links.forEach(a => a.classList.remove('active'));
-      const home = byId('hero');
-      if (home) home.classList.add('active');
-    }
-
-    // Закрывать бургер после клика по пункту меню (если бургер добавляет класс на body)
-    nav.addEventListener('click', (e) => {
-      const a = e.target.closest('a[href^="#"]');
-      if (!a) return;
-      document.body.classList.remove('nav-open');
+  // Подсветка активного пункта при скролле
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        links.forEach(a => a.classList.remove('active'));
+        const link = byId(id);
+        if (link) link.classList.add('active');
+        // не ломаем историю, но обновляем hash красиво
+        history.replaceState(null, '', '#' + id);
+      }
     });
-  })();
+  }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+  // Наблюдаем за всеми секциями с id
+  document.querySelectorAll('section[id]').forEach(sec => io.observe(sec));
+
+  // Активная "Home" по умолчанию, если открыли без hash
+  if (!location.hash) {
+    links.forEach(a => a.classList.remove('active'));
+    const homeLink = byId('home');
+    if (homeLink) homeLink.classList.add('active');
+  }
+
+  // Закрыть бургер после клика по пункту меню
+  nav.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    document.body.classList.remove('nav-open'); // если ты где-то её добавляешь
+  });
+})();
