@@ -153,6 +153,19 @@ header.mobile {
   outline-offset:2px
 }
 
+/* Состояние мобильного меню */
+.mobile-nav { display: none; }
+.mobile-nav.open { display: block; }
+
+/* Опционально: запрет прокрутки, когда меню открыто */
+body.nav-open { overflow: hidden; }
+
+/* Подсветка активного пункта */
+.mobile-nav .nav-list a.active {
+  color: var(--blue);
+  font-weight: 600;
+}
+
 .page {
   padding:8px 0 28px
 }
