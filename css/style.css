@@ -21,10 +21,12 @@ html {
   scroll-margin-top: clamp(64px, 10vh, 96px);
 }
 
+/*
 .nav-list a.active {
   color: var(--text, #fff);
   font-weight: 600; 
 }
+  */
 
 body {
   margin:0;
@@ -149,8 +151,9 @@ header.mobile {
 }
 
 .mobile-nav a[aria-current="page"] {
-  outline:2px solid var(--palepink); 
-  outline-offset:2px
+  color: var(--blue);
+  font-weight: 600;
+  outline: none;
 }
 
 .mobile-nav { display: none; }
@@ -159,10 +162,12 @@ header.mobile {
 
 body.nav-open { overflow: hidden; }
 
+/*
 .mobile-nav .nav-list a.active {
   color: var(--blue);
   font-weight: 600;
 }
+*/
 
 .page {
   padding:8px 0 28px
